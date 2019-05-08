@@ -23,6 +23,7 @@ time, mark, audio, video {
 	font-size: 62.5%;
 	font: inherit;
 	vertical-align: baseline;
+	font-family: Arial, Helvetica, sans-serif;
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
@@ -57,6 +58,15 @@ html, body {
     height: 100%;
 }
 
+// Font Variables
+@sfont: 1.0rem;
+@mfont: 1.2rem;
+@lfont: 1.6rem;
+
+// Color Variables
+@gray: @gray;
+
+
 .container {
 	max-width: 800px;
 	margin: 0 auto;
@@ -65,23 +75,141 @@ html, body {
 header {
 	display: flex;
 	border-bottom: 1px solid #6DB5BD;
-	margin: 20px 0;
 	padding: 20px 0;
 	justify-content: flex-end;
 
-	@media(max-width: 550px) {
-		justify-content: space-between;
+	@media(max-width: 500px) {
+		justify-content: space-around;
 		align-items: center;
 	}
 	nav {
 		display: flex;
 		align-items: center;
-		margin-left: 62px;
 		a {
 			margin-left: 20px;
-			font-size: 1.2rem;
-			color: #6DB5BD;
+			font-size: @sfont;
+			color: @gray;
 			text-decoration: none;
 		  }
+	}
+}
+.intro {
+	display: flex;
+	flex-direction: column;
+	border-bottom: 1px solid #6DB5BD;
+	background-color: gainsboro;
+	align-items: baseline;
+
+	@media(max-width: 500px) {
+		.shola{
+			width: 100%;
+		}
+	}
+
+	h1 {
+		font-size: @lfont;
+		color: @gray;
+		margin-top: 20px;
+	}
+	p {
+		font-size: @sfont;
+		margin-top: 20px;
+		color: @gray;
+	}
+	
+}
+.team-up {
+	display: block;
+	background-color: @gray;
+	color: white;
+	margin: 0 10px 20px;
+	cursor: pointer;
+	min-width: 200px;
+	height: 45px;
+	font-size: @mfont;
+	border-radius: 5px;
+	border: none;
+	margin-top: 20px;
+}
+
+.work-history{
+	font-size: @mfont;
+	color: darkslategray;
+	table {
+		width: 100%;
+		text-align: center;
+	}
+	td, th {
+		border: 1px solid #ddd;
+		padding: 8px;
+	}
+	th {
+		padding-top: 12px;
+		padding-bottom: 12px;
+		text-align: left;
+		background-color: @gray;
+		color: white;
+		text-align: center;
+	}
+	tr:nth-child(even) {
+		background-color: #f2f2f2;
+		:hover {
+			background-color: #ddd;
+		}
+	}
+}
+.skills {
+	display: flex;
+	align-items: baseline;
+	margin: 30px 0;
+	@media(max-width: 500px) {
+		flex-direction: column;
+		width: 100%;
+	}
+	.listen-up {
+		width: 48%;
+		h1 {
+			font-size: @lfont;
+			color: @gray;
+			margin-top: 20px;
+		}
+		p {
+			font-size: @mfont;
+			margin-top: 20px;
+			color: @gray;
+		}
+		@media(max-width: 500px) {
+			margin-bottom: 20px;
+			width: 100%;
+		}
+	}
+	.hard-skills {
+		font-size: @mfont;
+		color: @gray;
+		width: 48%;
+		margin-left: 20px;
+		@media(max-width: 500px) {
+			width: 100%;
+			margin-left: 0;
+		}
+		h1 {
+			font-size: @lfont;
+			color: @gray;
+			margin-bottom: 20px;
+		}
+		table {
+			width: 100%;
+		}
+		td {
+			border: 1px solid #ddd;
+			padding: 8px;
+		}
+		tr:nth-child(even) {
+			background-color: #f2f2f2;
+			:hover {
+				background-color: #ddd;
+			}
+		}
+
 	}
 }

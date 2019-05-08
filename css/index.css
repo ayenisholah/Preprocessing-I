@@ -89,6 +89,7 @@ video {
   font-size: 62.5%;
   font: inherit;
   vertical-align: baseline;
+  font-family: Arial, Helvetica, sans-serif;
 }
 /* HTML5 display-role reset for older browsers */
 article,
@@ -141,24 +142,144 @@ body {
 header {
   display: flex;
   border-bottom: 1px solid #6DB5BD;
-  margin: 20px 0;
   padding: 20px 0;
   justify-content: flex-end;
 }
-@media (max-width: 550px) {
+@media (max-width: 500px) {
   header {
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
   }
 }
 header nav {
   display: flex;
   align-items: center;
-  margin-left: 62px;
 }
 header nav a {
   margin-left: 20px;
-  font-size: 1.2rem;
-  color: #6DB5BD;
+  font-size: 1rem;
+  color: darkslategray;
   text-decoration: none;
+}
+.intro {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid #6DB5BD;
+  background-color: gainsboro;
+  align-items: baseline;
+}
+@media (max-width: 500px) {
+  .intro .shola {
+    width: 100%;
+  }
+}
+.intro h1 {
+  font-size: 1.6rem;
+  color: darkslategray;
+  margin-top: 20px;
+}
+.intro p {
+  font-size: 1rem;
+  margin-top: 20px;
+  color: darkslategray;
+}
+.team-up {
+  display: block;
+  background-color: darkslategray;
+  color: white;
+  margin: 0 10px 20px;
+  cursor: pointer;
+  min-width: 200px;
+  height: 45px;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  border: none;
+  margin-top: 20px;
+}
+.work-history {
+  font-size: 1.2rem;
+  color: darkslategray;
+}
+.work-history table {
+  width: 100%;
+  text-align: center;
+}
+.work-history td,
+.work-history th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+.work-history th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: darkslategray;
+  color: white;
+  text-align: center;
+}
+.work-history tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+.work-history tr:nth-child(even) :hover {
+  background-color: #ddd;
+}
+.skills {
+  display: flex;
+  align-items: baseline;
+  margin: 30px 0;
+}
+@media (max-width: 500px) {
+  .skills {
+    flex-direction: column;
+    width: 100%;
+  }
+}
+.skills .listen-up {
+  width: 48%;
+}
+.skills .listen-up h1 {
+  font-size: 1.6rem;
+  color: darkslategray;
+  margin-top: 20px;
+}
+.skills .listen-up p {
+  font-size: 1.2rem;
+  margin-top: 20px;
+  color: darkslategray;
+}
+@media (max-width: 500px) {
+  .skills .listen-up {
+    margin-bottom: 20px;
+    width: 100%;
+  }
+}
+.skills .hard-skills {
+  font-size: 1.2rem;
+  color: darkslategray;
+  width: 48%;
+  margin-left: 20px;
+}
+@media (max-width: 500px) {
+  .skills .hard-skills {
+    width: 100%;
+    margin-left: 0;
+  }
+}
+.skills .hard-skills h1 {
+  font-size: 1.6rem;
+  color: darkslategray;
+  margin-bottom: 20px;
+}
+.skills .hard-skills table {
+  width: 100%;
+}
+.skills .hard-skills td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+.skills .hard-skills tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+.skills .hard-skills tr:nth-child(even) :hover {
+  background-color: #ddd;
 }
